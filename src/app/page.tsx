@@ -3,6 +3,7 @@ import Hero from '@/components/home/Hero';
 import Philosophy from '@/components/home/Philosophy';
 import Services from '@/components/home/Services';
 import Team from '@/components/home/Team';
+import Footer from '@/components/layout/Footer';
 import Header from '@/components/layout/Header';
 
 export default function Home() {
@@ -14,10 +15,7 @@ export default function Home() {
       <Services />
       <Gallery />
       <Team />
-      {/* Spacer to allow scrolling so you can test the parallax */}
-      <section className="h-screen flex items-center justify-center">
-        <p className="text-muted">Content continues here...</p>
-      </section>
+      {/* <Footer /> */}
     </main>
   );
 }
