@@ -74,7 +74,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${satoshi.variable} antialiased bg-background text-foreground font-sans`}>
+      <body className={`${satoshi.variable} antialiased bg-background text-foreground font-sans max-w-screen overflow-x-hidden`}>
         <SmoothScroller />
         <Header />
         {children}
