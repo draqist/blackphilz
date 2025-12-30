@@ -100,10 +100,10 @@ export default function Services() {
               </span>
               
               <div className="relative">
-                <h3 className="text-4xl md:text-6xl font-light tracking-tight text-black/80 group-hover:text-black group-hover:font-normal transition-all duration-300">
+                <h3 className="text-3xl md:text-6xl font-light tracking-tight text-black/80 group-hover:text-black group-hover:font-normal transition-all duration-300">
                   {service.title}
                 </h3>
-                <span className="absolute -top-3 -right-8 text-xs font-bold text-black/30 group-hover:text-black/60 transition-colors">
+                <span className="absolute -top-3 -right-4 md:-right-8 text-xs font-bold text-black/30 group-hover:text-black/60 transition-colors">
                   {service.count}
                 </span>
               </div>

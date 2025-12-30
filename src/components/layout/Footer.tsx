@@ -60,9 +60,9 @@ export default function Footer() {
         <div className="flex flex-col gap-2">
            <h4 className="text-white uppercase tracking-widest text-xs mb-4">Follow</h4>
            <div className="flex gap-4">
-             <a href="#" className="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center hover:bg-white hover:text-black transition-all">IG</a>
-             <a href="#" className="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center hover:bg-white hover:text-black transition-all">LN</a>
-             <a href="#" className="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center hover:bg-white hover:text-black transition-all">TW</a>
+             <Link href="https://instagram.com/blackphilzconstruction" className="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center hover:bg-white hover:text-black transition-all">IG</Link>
+             <Link href="https://www.linkedin.com/in/engr-yomi-akinola-202b7979/" className="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center hover:bg-white hover:text-black transition-all">LN</Link>
+             <Link href="https://twitter.com/blackphilzconstruction" className="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center hover:bg-white hover:text-black transition-all">TW</Link>
            </div>
         </div>
 
