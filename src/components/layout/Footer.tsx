@@ -31,7 +31,7 @@ export default function Footer() {
         
         {/* Column 1: Brand */}
         <div className="col-span-1">
-          <h3 className="text-white text-lg font-bold mb-4">APEX CONST.</h3>
+          <h3 className="text-white text-lg font-bold mb-4">BLACKPHILZ CONST.</h3>
           <p className="max-w-xs">
             Thoughtful architecture, shaped by stillness. We build presence, not just places.
           </p>
@@ -49,11 +49,11 @@ export default function Footer() {
         {/* Column 3: Contact */}
         <div className="flex flex-col gap-2">
           <h4 className="text-white uppercase tracking-widest text-xs mb-4">Visit</h4>
-          <p>142 Industrial Ave.</p>
+          <p>9, Caxton Close, Surulere,</p>
           <p>Lagos, Nigeria</p>
           <br/>
-          <p className="text-white">hello@apexcons.ng</p>
-          <p>+234 800 123 4567</p>
+          <p className="text-white">hello@blackphilz.vercel.app</p>
+          <p>+234-8165-375-180</p>
         </div>
 
         {/* Column 4: Socials */}
@@ -70,13 +70,13 @@ export default function Footer() {
 
       {/* 3. COPYRIGHT */}
       <div className="flex justify-between items-end mt-24 text-[10px] uppercase tracking-widest text-white/30">
-        <span>© 2025 Apex Construction.</span>
+        <span>© 2025 BlackPhilz Construction.</span>
         <span>Privacy Policy / Terms</span>
       </div>
 
       {/* Big Watermark Text at bottom */}
       <div className="absolute bottom-[-5vw] left-0 w-full text-center pointer-events-none opacity-5">
-        <h1 className="text-[20vw] font-bold leading-none text-white">APEX</h1>
+        <h1 className="text-[14vw] font-bold leading-none text-white">BLACKPHILZ</h1>
       </div>
 
     </footer>

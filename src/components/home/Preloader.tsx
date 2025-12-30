@@ -1,27 +1,47 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
+import { useEffect, useRef, useState } from 'react';
+
+const PRELOADER_SESSION_KEY = 'blackphilz_preloader_shown';
 
 export default function Preloader() {
   const container = useRef<HTMLDivElement>(null);
   const counterRef = useRef<HTMLSpanElement>(null);
   const [complete, setComplete] = useState(false);
+  const [shouldShow, setShouldShow] = useState(false);
 
   useEffect(() => {
-    // Only run if the loader hasn't completed yet
-    // (In a real app, you might check session storage to skip this on refresh)
-    
+    // Check if preloader has already been shown in this session
+    if (typeof window !== 'undefined') {
+      const hasShown = sessionStorage.getItem(PRELOADER_SESSION_KEY);
+      if (hasShown) {
+        // Skip preloader, mark as complete immediately
+        setComplete(true);
+      } else {
+        // Show preloader and mark that it will be shown
+        setShouldShow(true);
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!shouldShow) return;
+
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({
-        onComplete: () => setComplete(true)
+        onComplete: () => {
+          // Mark as shown in session storage
+          sessionStorage.setItem(PRELOADER_SESSION_KEY, 'true');
+          setComplete(true);
+        }
       });
 
       // 1. The Counter Animation (0 -> 100)
       tl.to(counterRef.current, {
         innerHTML: 100,
         duration: 3,
-        snap: { innerHTML: 1 }, // Snap to whole numbers
+        snap: { innerHTML: 1 },
         ease: "power2.out",
         onUpdate: function() {
           if (counterRef.current) {
@@ -32,22 +52,19 @@ export default function Preloader() {
 
       // 2. The "Curtain Lift"
       tl.to(container.current, {
-        yPercent: -100, // Slide straight up
+        yPercent: -100,
         duration: 1.5,
-        ease: "expo.inOut", // The "Luxury" ease
+        ease: "expo.inOut",
         delay: 0.2
       });
-
-      // 3. Optional: Scale the "body" behind it? 
-      // Usually better handled by the main page animation awaiting this.
       
     }, container);
 
     return () => ctx.revert();
-  }, []);
+  }, [shouldShow]);
 
-  // If complete, we can unmount it from the DOM entirely to save resources
-  if (complete) return null;
+  // If complete or shouldn't show, don't render
+  if (complete || !shouldShow) return null;
 
   return (
     <div 
@@ -56,7 +73,7 @@ export default function Preloader() {
     >
       {/* Top Details */}
       <div className="flex justify-between items-start opacity-50 text-xs uppercase tracking-widest">
-        <span>Apex Const.</span>
+        <span>BlackPhilz Const.</span>
         <span>Lagos, NG</span>
       </div>
 

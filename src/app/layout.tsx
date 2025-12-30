@@ -64,8 +64,50 @@ const satoshi = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Blackp",
-  description: "A dark mode premium experience",
+  metadataBase: new URL("https://blackphilz.vercel.app"),
+  title: {
+    default: "Blackphilz | Engineering & Construction",
+    template: "%s | Blackphilz",
+  },
+  description: "A premium engineering and construction firm delivering excellence in Nigeria.",
+  keywords: ["Engineering", "Construction", "Architecture", "Nigeria", "Premium", "Design"],
+  authors: [{ name: "Blackphilz" }],
+  creator: "Blackphilz",
+  publisher: "Blackphilz",
+  openGraph: {
+    title: "Blackphilz | Engineering & Construction",
+    description: "A premium engineering and construction firm delivering excellence in Nigeria.",
+    url: "https://blackphilz.vercel.app",
+    siteName: "Blackphilz",
+    locale: "en_NG",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.jpg", // Ensure there is an OG image at this path or update it
+        width: 1200,
+        height: 630,
+        alt: "Blackphilz - Engineering Excellence",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blackphilz | Engineering & Construction",
+    description: "A premium engineering and construction firm delivering excellence in Nigeria.",
+    creator: "@blackphilz",
+    images: ["/og-image.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({
