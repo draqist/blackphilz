@@ -63,10 +63,10 @@ export default function ProjectCatalog() {
   }, [filteredProjects]); // Re-run animation when filter changes
 
   return (
-    <section ref={container} className="w-full min-h-screen px-6 md:px-12 pb-32 mt-10">
+    <section ref={container} className="w-full min-h-screen px-6 md:px-12 pb-32 mt-0 md:mt-10">
       
       {/* --- HEADER & FILTER --- */}
-      <div className="flex flex-col md:flex-row justify-between items-end mb-24 border-b border-black/10 pb-8">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-24 border-b border-black/10 pb-8">
         <div>
           <h1 className="text-display-lg leading-[0.85] tracking-tighter mb-4">
             Selected<br/>Works
