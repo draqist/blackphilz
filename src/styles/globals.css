@@ -21,4 +21,5 @@ body {
   background: var(--background);
   font-family: var(--font-satoshi);
   overscroll-behavior: none;
+  cursor: none;
 }

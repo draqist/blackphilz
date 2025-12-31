@@ -93,7 +93,7 @@ export default function Services() {
             <div 
               key={service.id}
               onMouseEnter={() => setActiveIdx(idx)}
-              className="group relative flex items-baseline gap-6 py-10 border-b border-black/10 cursor-pointer transition-all duration-500 hover:pl-8 hover:border-black/30"
+              className="group relative flex items-baseline gap-6 py-10 border-b border-black/10  transition-all duration-500 hover:pl-8 hover:border-black/30"
             >
               <span className="text-sm font-mono text-black/30 group-hover:text-black transition-colors">
                 ({service.id})

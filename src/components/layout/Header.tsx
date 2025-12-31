@@ -107,11 +107,11 @@ export default function Header() {
               setIsMenuOpen(!isMenuOpen);
               if (isSearchOpen) setIsSearchOpen(false);
             }}
-            className="flex flex-col gap-1.5 w-8 items-end group hover:opacity-70 transition-opacity relative z-60 drop-shadow-md cursor-pointer"
+            className="flex flex-col gap-1.5 w-8 items-end group hover:opacity-70 transition-opacity relative z-60 drop-shadow-md "
           >
             {isMenuOpen ? (
               // Close Icon
-              <div className="relative w-6 h-6 cursor-pointer">
+              <div className="relative w-6 h-6 ">
                 <span className="absolute top-1/2 left-0 w-full h-[2px] bg-white rotate-45 transform -translate-y-1/2 transition-transform" />
                 <span className="absolute top-1/2 left-0 w-full h-[2px] bg-white -rotate-45 transform -translate-y-1/2 transition-transform" />
               </div>

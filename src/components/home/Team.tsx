@@ -40,7 +40,7 @@ export default function Team() {
               key={member.id}
               onClick={() => handleToggle(member.id)}
               className={cn(
-                "group border-b transition-all duration-500 cursor-pointer overflow-hidden relative",
+                "group border-b transition-all duration-500  overflow-hidden relative",
                 // 2. CONTAINER STATE:
                 // Active = White Background, Border Transparent
                 // Inactive = Transparent Background, White Border

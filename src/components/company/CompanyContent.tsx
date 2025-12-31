@@ -143,7 +143,7 @@ export default function CompanyContent() {
          
          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {team.map((member) => (
-               <div key={member.id} className="team-card group cursor-pointer">
+               <div key={member.id} className="team-card group ">
                   <div className="relative aspect-[3/4] overflow-hidden bg-gray-800 mb-6">
                      <Image 
                         src={member.image} 

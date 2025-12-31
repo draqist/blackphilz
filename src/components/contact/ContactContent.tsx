@@ -179,7 +179,7 @@ export default function ContactContent() {
               </label>
               <div className="flex flex-wrap gap-4">
                 {['Commercial', 'Residential', 'Industrial', 'Renovation', 'Consultancy'].map((type) => (
-                  <label key={type} className="cursor-pointer">
+                  <label key={type} className="">
                     <input type="radio" name="projectType" value={type} className="peer sr-only" />
                     <span className="px-6 py-2 border border-black/20 rounded-full text-sm uppercase tracking-wider text-black/60 transition-all peer-checked:bg-black peer-checked:text-white peer-checked:border-black hover:border-black/50">
                       {type}
@@ -196,7 +196,7 @@ export default function ContactContent() {
               </label>
               <div className="flex flex-wrap gap-4">
                 {['< 50M', '50M - 200M', '200M - 1B', '1B +'].map((budget) => (
-                  <label key={budget} className="cursor-pointer">
+                  <label key={budget} className="">
                     <input type="radio" name="budget" value={budget} className="peer sr-only" />
                     <span className="px-6 py-2 border border-black/20 rounded-full text-sm uppercase tracking-wider text-black/60 transition-all peer-checked:bg-black peer-checked:text-white peer-checked:border-black hover:border-black/50">
                       {budget}
