@@ -4,6 +4,7 @@ import Header from "@/components/layout/Header";
 import SmoothScroller from "@/components/layout/SmoothScroller";
 import CustomCursor from "@/components/ui/CustomCursor";
 import "@/styles/globals.css";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 
@@ -125,6 +126,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <SpeedInsights />
       </body>
     </html>
   );
