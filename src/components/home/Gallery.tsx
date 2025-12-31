@@ -75,7 +75,7 @@ export default function Gallery() {
   return (
     <section 
       ref={container} 
-      className="relative w-full py-32 px-6 md:px-12 bg-background z-20"
+      className="relative w-full py-32 pb-18 px-6 md:px-12 bg-background z-20"
       onMouseEnter={onEnter}
       onMouseLeave={onLeave}
     >
@@ -136,7 +136,7 @@ export default function Gallery() {
       {mounted && createPortal(
         <div 
           ref={cursor}
-          className="fixed top-0 left-0 w-24 h-24 bg-white rounded-full flex items-center justify-center pointer-events-none z-100 mix-blend-difference opacity-0 scale-0 -translate-x-1/2 -translate-y-1/2"
+          className="fixed top-0 left-0 w-24 h-24 bg-white rounded-full flex items-center justify-center pointer-events-none z-100 opacity-0 scale-0 -translate-x-1/2 -translate-y-1/2"
         >
           <span ref={cursorLabel} className="text-black text-center text-xs font-bold tracking-widest">
             CLICK TO VIEW

@@ -23,3 +23,10 @@ body {
   overscroll-behavior: none;
   cursor: none;
 }
+
+@media (hover: hover) and (pointer: fine) {
+  /* Target everything, including hover states and active states */
+  *, *::before, *::after, html, body, a, button, input, select, textarea {
+    cursor: none !important; /* !important overrides Tailwind's cursor-pointer */
+  }
+}
