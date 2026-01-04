@@ -1,8 +1,8 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { usePathname } from 'next/navigation';
+import { useEffect, useRef, useState } from 'react';
 
 export default function CustomCursor() {
   const cursorRef = useRef<HTMLDivElement>(null);
@@ -103,7 +103,7 @@ export default function CustomCursor() {
       */}
       <div 
         ref={cursorRef} 
-        className="fixed top-0 left-0 w-2 h-2 bg-white rounded-full pointer-events-none z-[9999] mix-blend-difference -translate-x-1/2 -translate-y-1/2 will-change-transform"
+        className="fixed top-0 left-0 w-2 h-2 bg-white rounded-full pointer-events-none z-9999 mix-blend-difference -translate-x-1/2 -translate-y-1/2 will-change-transform"
       />
       
       {/* The Lens: Normal blend mode so we can use blur/colors. 
@@ -111,7 +111,7 @@ export default function CustomCursor() {
       */}
       <div 
         ref={followerRef} 
-        className="fixed top-0 left-0 w-8 h-8 rounded-full pointer-events-none z-[9998] -translate-x-1/2 -translate-y-1/2 will-change-transform transition-colors"
+        className="fixed top-0 left-0 w-8 h-8 rounded-full pointer-events-none z-9998 -translate-x-1/2 -translate-y-1/2 will-change-transform transition-colors"
       />
     </>
   );

@@ -437,7 +437,7 @@ function SearchOverlay({ isOpen, close }: { isOpen: boolean, close: () => void }
                   <button
                     key={member.id}
                     // For now, team links to /company or nowhere, unless you made team pages
-                    onClick={() => handleNavigate('/company')} 
+                    onClick={() => handleNavigate('/studio')} 
                     className="group flex items-center gap-6 w-full text-left py-4 border-b border-white/5 hover:border-white/20 transition-colors"
                   >
                     {/* Tiny Avatar */}

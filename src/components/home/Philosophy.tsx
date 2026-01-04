@@ -129,14 +129,14 @@ export default function Philosophy() {
       <div className="hidden md:block w-1/2 h-screen sticky top-0 right-0">
         <div className="relative w-full h-full border-l border-white/20">
           <Image
-            src="/images/philosophy-interior.jpg" 
+            src="/images/project-3.jpg" 
             alt="Minimalist Interior Concrete"
             fill
             className="object-cover"
             priority
           />
           {/* Enhanced Overlay: A subtle gradient makes the text pop if screens overlap */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/10 to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-r from-black/10 to-transparent" />
           
           {/* Optional: A small "Caption" badge on the image itself */}
           <div className="absolute bottom-12 right-12 bg-white/10 backdrop-blur-md px-4 py-2 border border-white/20">

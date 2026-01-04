@@ -1,4 +1,3 @@
-import Preloader from "@/components/home/Preloader";
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 import SmoothScroller from "@/components/layout/SmoothScroller";
@@ -122,7 +121,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${satoshi.variable} antialiased bg-background text-foreground font-sans max-w-screen overflow-x-hidden`}>
         <SmoothScroller />
-        <Preloader />
+        {/* <Preloader /> */}
         <CustomCursor />
         <Header />
         {children}

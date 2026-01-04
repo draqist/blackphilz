@@ -103,7 +103,7 @@ export default function Team() {
                     src={member.image}
                     alt={member.name}
                     fill
-                    className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                    className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700 object-top"
                   />
                 </div>
 

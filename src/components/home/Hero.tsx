@@ -1,10 +1,10 @@
 'use client';
 
-import { useRef } from 'react';
-import Image from 'next/image';
+import useIsomorphicLayoutEffect from '@/hooks/useIsomorphicLayoutEffect';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import useIsomorphicLayoutEffect from '@/hooks/useIsomorphicLayoutEffect';
+import Image from 'next/image';
+import { useRef } from 'react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -60,14 +60,14 @@ export default function Hero() {
       {/* Background Image - Parallax Container */}
       <div ref={bgImage} className="absolute inset-0 w-full h-[120%] -top-[10%] z-0 will-change-transform">
         <Image
-          src="/images/hero-construction.jpg"
+          src="/images/project-2.jpg"
           alt="Architectural Concrete Structure"
           fill
           priority
           className="object-cover brightness-[0.75]" 
         />
         {/* Gradient Scrim for text legibility */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent" />
       </div>
 
       {/* Main Content - Flex/Grid container */}
@@ -113,7 +113,7 @@ export default function Hero() {
             </button>
 
             {/* Divider Line */}
-            <div className="w-full h-[1px] bg-white/20 my-2" />
+            <div className="w-full h-px bg-white/20 my-2" />
 
             {/* Tags - Now part of the flow! */}
             <div className="flex flex-wrap gap-3 lg:justify-end">
